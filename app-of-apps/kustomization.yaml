@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: original-elephant-dotnet-basic 
+  janus-idp.io/tekton: original-elephant-dotnet-basic
+  backstage.io/kubernetes-id: original-elephant-dotnet-basic
+  backstage.io/kubernetes-namespace: flavius-e2e 
+  app.kubernetes.io/part-of: original-elephant-dotnet-basic
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
